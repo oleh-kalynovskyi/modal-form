@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { FaUnlockAlt } from 'react-icons/fa';
+import { FaUserAlt } from 'react-icons/fa';
 
 export default class SingUp extends Component {
     
@@ -37,6 +38,8 @@ export default class SingUp extends Component {
                 </h3>
                 <form onSubmit={this.handleSubmit} className="form">
                     <p>
+
+                    <div className="input-icon">
                         <input type="text" 
                             placeholder="First Name *" 
                             required 
@@ -44,6 +47,8 @@ export default class SingUp extends Component {
                             onChange={this.handleChange} 
                             name="firstName"
                             />
+                        <FaUserAlt className="icon"/>
+                    </div>
                         <input type="text" 
                             placeholder="Last Name *" 
                             required
@@ -59,6 +64,8 @@ export default class SingUp extends Component {
                         value={this.state.EmailAddress}
                         name="EmailAddress"
                         style={{ marginBottom: "20px" }}/>
+
+                    <div className="input-icon">
                     <input type="password"
                         placeholder="Set A Password *" 
                         onChange={this.handleChange} 
@@ -67,6 +74,9 @@ export default class SingUp extends Component {
                         required 
                         minLength="8"
                         style={{ marginBottom: "20px" }}/>
+                        <FaUnlockAlt className="icon"/>
+                    </div>
+
                     <button>GET STARTED</button>
                 </form>
             </>

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { FaUnlockAlt } from 'react-icons/fa';
 
 export default class LogIn extends Component {
 
@@ -40,6 +41,7 @@ export default class LogIn extends Component {
                         onChange={this.handleChange}
                         style={{marginBottom: '20px'}}/>
 
+                    <div className="input-icon">
                     <input 
                         className="LogIn-password" 
                         type="password" 
@@ -47,7 +49,9 @@ export default class LogIn extends Component {
                         required
                         name="logPassword"
                         value={this.state.logPassword}
-                        onChange={this.handleChange}/>
+                        onChange={this.handleChange}/><FaUnlockAlt className="icon"/>
+                    </div>
+
 
                     <span><a href="#">Forgot Password?</a></span>
 
