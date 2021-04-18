@@ -22,6 +22,8 @@ function App() {
   ];
 
   return (
+    <>
+    <h1>Ger Ger</h1>
     <div className="modal-box">
       <div className="madal-box-buttonts">
         {items.map((n, i) => (
@@ -35,6 +37,7 @@ function App() {
       </div>
        <TabContent {...items[active]}/>
     </div>
+    </>
   );
 }
 
