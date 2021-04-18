@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/oleh-kalynovskyi/modal-form/static/css/main.c3b39912.chunk.css",
+    "main.js": "/oleh-kalynovskyi/modal-form/static/js/main.797cbdf5.chunk.js",
+    "main.js.map": "/oleh-kalynovskyi/modal-form/static/js/main.797cbdf5.chunk.js.map",
+    "runtime-main.js": "/oleh-kalynovskyi/modal-form/static/js/runtime-main.d53d6e29.js",
+    "runtime-main.js.map": "/oleh-kalynovskyi/modal-form/static/js/runtime-main.d53d6e29.js.map",
+    "static/js/2.784b537e.chunk.js": "/oleh-kalynovskyi/modal-form/static/js/2.784b537e.chunk.js",
+    "static/js/2.784b537e.chunk.js.map": "/oleh-kalynovskyi/modal-form/static/js/2.784b537e.chunk.js.map",
+    "index.html": "/oleh-kalynovskyi/modal-form/index.html",
+    "static/css/main.c3b39912.chunk.css.map": "/oleh-kalynovskyi/modal-form/static/css/main.c3b39912.chunk.css.map",
+    "static/js/2.784b537e.chunk.js.LICENSE.txt": "/oleh-kalynovskyi/modal-form/static/js/2.784b537e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d53d6e29.js",
+    "static/js/2.784b537e.chunk.js",
+    "static/css/main.c3b39912.chunk.css",
+    "static/js/main.797cbdf5.chunk.js"
+  ]
+}
