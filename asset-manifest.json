@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/oleh-kalynovskyi/modal-form/static/css/main.de8e08aa.chunk.css",
-    "main.js": "/oleh-kalynovskyi/modal-form/static/js/main.48c7a3d0.chunk.js",
-    "main.js.map": "/oleh-kalynovskyi/modal-form/static/js/main.48c7a3d0.chunk.js.map",
+    "main.js": "/oleh-kalynovskyi/modal-form/static/js/main.b4a6274c.chunk.js",
+    "main.js.map": "/oleh-kalynovskyi/modal-form/static/js/main.b4a6274c.chunk.js.map",
     "runtime-main.js": "/oleh-kalynovskyi/modal-form/static/js/runtime-main.d53d6e29.js",
     "runtime-main.js.map": "/oleh-kalynovskyi/modal-form/static/js/runtime-main.d53d6e29.js.map",
     "static/js/2.330c89dd.chunk.js": "/oleh-kalynovskyi/modal-form/static/js/2.330c89dd.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.d53d6e29.js",
     "static/js/2.330c89dd.chunk.js",
     "static/css/main.de8e08aa.chunk.css",
-    "static/js/main.48c7a3d0.chunk.js"
+    "static/js/main.b4a6274c.chunk.js"
   ]
 }
