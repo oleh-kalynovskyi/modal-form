@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { FaUnlockAlt } from 'react-icons/fa';
+import classNames from "classnames";
+
 import { FaUserAlt } from 'react-icons/fa';
+
+import { FaLock } from 'react-icons/fa';
+import { FaLockOpen } from 'react-icons/fa';
 
 export default class SingUp extends Component {
     
@@ -8,8 +12,15 @@ export default class SingUp extends Component {
         firstName: "",
         LastName: "",
         EmailAddress: "",
-        password: ""
+        password: "",
+
+        icon: false,
+        input: false
     };
+
+    handleSubmit = () => {
+        this.setState({ input: true });
+    }
 
     handleChange = (e) => {
         const { name, value } = e.target
@@ -18,29 +29,22 @@ export default class SingUp extends Component {
         })
     };
 
-    handleSubmit = (event) => {
-        event.preventDefault()
-          this.setState({
-            firstName: '',
-            LastName: "",
-            EmailAddress: "",
-            password: ""
-        })
-        // localStorage.setItem(this.state.EmailAddress, JSON.stringify(this.state));
-        console.log(this.state);
-    }
-
     render() {
+        const { firstName, LastName, EmailAddress, password } = this.state;
         return (
             <>
                 <h3 className="component-title">
                     Sing Up for Free!
                 </h3>
                 <form onSubmit={this.handleSubmit} className="form">
-                    <p>
-
+                    <div className="name">
                     <div className="input-icon">
-                        <input type="text" 
+                        <input 
+                            className={classNames("", {
+                                "is-danger": !firstName && this.state.input
+                            })}
+                            type="text" 
+                            autoComplete="off"
                             placeholder="First Name *" 
                             required 
                             value={this.state.firstName}
@@ -49,15 +53,25 @@ export default class SingUp extends Component {
                             />
                         <FaUserAlt className="icon"/>
                     </div>
-                        <input type="text" 
+                        <input 
+                            className={classNames("", {
+                                "is-danger": !LastName && this.state.input
+                            })}
+                            type="text" 
+                            autoComplete="off"
                             placeholder="Last Name *" 
                             required
                             value={this.state.LastName}
                             name="LastName"
                             onChange={this.handleChange} 
                         />
-                    </p>
-                    <input type="email" 
+                    </div>
+                    <input 
+                        className={classNames("", {
+                            "is-danger": !EmailAddress && this.state.input
+                        })}
+                        type="email" 
+                        autoComplete="off"
                         placeholder="Email Address *" 
                         required
                         onChange={this.handleChange} 
@@ -66,7 +80,12 @@ export default class SingUp extends Component {
                         style={{ marginBottom: "20px" }}/>
 
                     <div className="input-icon">
-                    <input type="password"
+                    <input 
+                        className={classNames("", {
+                            "is-danger": !password && this.state.input
+                        })}
+                        type={this.state.icon ? "text" : "password"}
+                        autoComplete="off"
                         placeholder="Set A Password *" 
                         onChange={this.handleChange} 
                         value={this.state.password}
@@ -74,10 +93,16 @@ export default class SingUp extends Component {
                         required 
                         minLength="8"
                         style={{ marginBottom: "20px" }}/>
-                        <FaUnlockAlt className="icon"/>
+                        <div className="icon"
+                            onClick={() =>
+                                this.setState({ icon: !this.state.icon })
+                            }
+                        >
+                            {this.state.icon ? <FaLockOpen/> : <FaLock/>}
+                        </div>
                     </div>
 
-                    <button>GET STARTED</button>
+                    <button onClick={this.handleSubmit}>GET STARTED</button>
                 </form>
             </>
         )

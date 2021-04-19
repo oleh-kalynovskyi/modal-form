@@ -1,5 +1,6 @@
 import './App.css';
 import React, {useState} from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 import LogIn from './component/LogIn';
 import SingUp from './component/SingUp';
@@ -23,7 +24,6 @@ function App() {
 
   return (
     <>
-    <h1>Ger Ger</h1>
     <div className="modal-box">
       <div className="madal-box-buttonts">
         {items.map((n, i) => (
@@ -35,7 +35,13 @@ function App() {
           >{n.title}</button>
         ))}
       </div>
-       <TabContent {...items[active]}/>
+      <CSSTransition
+        in={ active }
+        timeout={3000}
+        classNames="alert"
+      >
+        <TabContent {...items[active]}/>
+      </CSSTransition>
     </div>
     </>
   );
